@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Tic-Tac Game</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fjalla+One&family=Inter:wght@500&family=Lobster&family=Manjari:wght@700&family=Oswald:wght@200;400;500&display=swap');
+            /* body{background-color: #3498db;} */
+            h1{color:rgb(185, 4, 4); font-family:Lobster; margin-top: 2%;}
+            .container{background-color: rgb(246, 248, 246); width:61%; margin:0% 20%; border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+            .main{margin: 0 23%; padding: 5% 0;}
+            .text{height:150px; width: 150px; margin:5px; font-size: 155px; border-radius: 15px; cursor: pointer; text-align: center;} 
+            #rest{background-color: #3498db; color:white; border-radius: 5px; width: 50%; height: 40px; margin-top: 10px; border: none;}
+            #rest:hover{background-color: red;}
+
+            .winning-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .9);
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 5rem;
+            flex-direction: column;
+            }
+
+            .winning-message button {
+            font-size: 3rem;
+            background-color: white;
+            border: 1px solid black;
+            padding: .25em .5em;
+            cursor: pointer;
+            }
+
+            .winning-message button:hover {
+            background-color: black;
+            color: white;
+            border-color: white;
+            }
+
+            .winning-message.show {
+            display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Tic-Tac-Game</h1>
+        </center>
+        <div class="container">
+            <div class="main">
+            <div class="row">
+                <input type="text" class="text" id="f1" onclick="Clicked(event); gameCheck()"  readonly data-cell>
+                <input type="text" class="text" id="f2" onclick="Clicked(event); gameCheck()"  readonly data-cell>
+                <input type="text" class="text" id="f3" onclick="Clicked(event); gameCheck()"  readonly data-cell>
+            </div>
+            <div class="row">
+                <input type="text" class="text" id="f4" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+                <input type="text" class="text" id="f5" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+                <input type="text" class="text" id="f6" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+            </div>
+            <div class="row">
+                <input type="text" class="text" id="f7" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+                <input type="text" class="text" id="f8" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+                <input type="text" class="text" id="f9" onclick="Clicked(event); gameCheck()"  readonly data-cell >
+            </div>  
+<!-- 
+            <div class="row">
+                <input type="text" class="text" id="f1" onclick="f1Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f2" onclick="f2Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f3" onclick="f3Clicked(); gameCheck()" readonly>
+            </div>
+            <div class="row">
+                <input type="text" class="text" id="f4" onclick="f4Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f5" onclick="f5Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f6" onclick="f6Clicked(); gameCheck()" readonly>
+            </div>
+            <div class="row">
+                <input type="text" class="text" id="f7" onclick="f7Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f8" onclick="f8Clicked(); gameCheck()" readonly>
+                <input type="text" class="text" id="f9" onclick="f9Clicked(); gameCheck()" readonly>
+            </div>   -->
+            <div class="winning-message" id="winningMessage">
+                <div data-winning-message-text></div>
+            <input type="button" id="rest" value="Reset" onclick="reset()">
+            </div>  
+        </div>    
+        </div>
+        <script src="tic.js"></script>
+    </body>
+</html>
